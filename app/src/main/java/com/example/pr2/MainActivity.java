@@ -17,10 +17,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.relative_layout);
+        Intent intent = new Intent(this, Login.class);
+        intent.putExtra("string", "Шинькович Антон Олегович");
         Button button = (Button) findViewById(R.id.button3);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Log.i(TAG, "Button clicked");
+                startActivity(intent);
             }
         });
     }
@@ -33,5 +36,8 @@ public class MainActivity extends AppCompatActivity {
     }
     public void LogButton(View view){
         Log.i(TAG, "Button clicked");
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
     }
+
 }
