@@ -10,7 +10,7 @@
         android:layout_height="513dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintHorizontal_bias="0.885"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -56,8 +56,8 @@
             android:layout_marginTop="174dp"
             android:layout_marginEnd="124dp"
             android:layout_marginBottom="269dp"
-            android:textColor="@color/diamond"
-            android:text="Button" />
+            android:text="Button"
+            android:textColor="@color/diamond" />
 
         <ImageView
             android:id="@+id/imageView3"

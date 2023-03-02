@@ -2,6 +2,7 @@
     <string name="app_name">Pr2</string>
     <string name="ZXC">Кнопка1</string>
     <string name="ZXC2">Кнопка2</string>
+    <string name="ZXC3">введите пароль</string>
 
     <dimen name="in_pixels">1px</dimen>
     <dimen name="in_dp">5dp</dimen>
