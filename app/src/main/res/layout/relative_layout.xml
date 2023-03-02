@@ -26,7 +26,7 @@
             android:layout_marginTop="24dp"
             android:layout_marginEnd="110dp"
             android:layout_marginBottom="435dp"
-            android:text="TextView" />
+            android:text="@string/ZXC" />
 
         <EditText
             android:id="@+id/editTextTextPassword3"
@@ -56,6 +56,7 @@
             android:layout_marginTop="174dp"
             android:layout_marginEnd="124dp"
             android:layout_marginBottom="269dp"
+            android:textColor="@color/diamond"
             android:text="Button" />
 
         <ImageView
@@ -70,6 +71,6 @@
             android:layout_marginTop="269dp"
             android:layout_marginEnd="121dp"
             android:layout_marginBottom="130dp"
-            app:srcCompat="@android:drawable/ic_popup_reminder" />
+            app:srcCompat="@drawable/image_1" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

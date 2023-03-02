@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="83dp"
             android:layout_weight="1"
-            android:text="TEXT" />
+            android:text="@string/ZXC2" />
 
         <EditText
             android:id="@+id/editTextTextPassword"
@@ -49,6 +49,7 @@
             android:layout_width="200dp"
             android:layout_height="77dp"
             android:layout_weight="1"
+            android:textColor="@color/blue"
             android:text="Button" />
 
         <ImageView
@@ -56,6 +57,6 @@
             android:layout_width="203dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@android:drawable/ic_popup_reminder" />
+            app:srcCompat="@drawable/image_1" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
