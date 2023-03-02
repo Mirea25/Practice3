@@ -10,9 +10,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "PR2";
+    String password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Log.i(TAG, "Button clicked");
-                startActivity(intent);
+                startActivityForResult(intent,1);
             }
         });
     }
@@ -37,7 +39,15 @@ public class MainActivity extends AppCompatActivity {
     public void LogButton(View view){
         Log.i(TAG, "Button clicked");
         Intent intent = new Intent(this, Login.class);
-        startActivity(intent);
+        startActivityForResult(intent,1);
+    }
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+        if (data != null) {
+            password = data.getStringExtra("pswd");
+            TextView text = (TextView) findViewById(R.id.textView4);
+            text.setText(password);
+        }
     }
 
 }

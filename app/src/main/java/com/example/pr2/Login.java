@@ -16,4 +16,11 @@ public class Login extends AppCompatActivity {
         Bundle arguments = getIntent().getExtras();
         String txt = arguments.get("string").toString();
     }
+    public void LogButton2(View view){
+        Intent intent = new Intent();
+        EditText editText = (EditText) findViewById(R.id.editTextTextPassword2);
+        intent.putExtra("pswd", editText.getText().toString());
+        setResult(RESULT_OK, intent);
+        finish();
+    }
 }
