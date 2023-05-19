@@ -1,5 +1,6 @@
 package com.example.pr2;
 
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
@@ -19,6 +20,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.relative_layout);
+        if (savedInstanceState == null) {
+            setfragment();
+        }
         Intent intent = new Intent(this, Login.class);
         intent.putExtra("string", "Шинькович Антон Олегович");
         Button button = (Button) findViewById(R.id.button3);
@@ -49,5 +53,22 @@ public class MainActivity extends AppCompatActivity {
             text.setText(password);
         }
     }
-
+    private void setfragment() {
+        Fragment1 firstfrag = new Fragment1();
+        FragmentTransaction frag = getSupportFragmentManager().beginTransaction();
+        frag.replace(R.id.frag1, firstfrag);
+        frag.commit();
+    }
+    public void FragButton(View view){
+        Fragment2 secondfrag = new Fragment2();
+        FragmentTransaction frag = getSupportFragmentManager().beginTransaction();
+        frag.replace(R.id.frag1, secondfrag);
+        frag.commit();
+    }
+    public void FragButton2(View view) {
+        Fragment1 firstfrag = new Fragment1();
+        FragmentTransaction frag = getSupportFragmentManager().beginTransaction();
+        frag.replace(R.id.frag1, firstfrag);
+        frag.commit();
+    }
 }
